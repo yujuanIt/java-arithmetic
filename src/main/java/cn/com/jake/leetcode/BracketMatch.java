@@ -3,7 +3,7 @@ package cn.com.jake.leetcode;
 import java.util.Stack;
 
 /**
- * 给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串，判断字符串是否有效。
+ * 给定一个只包括 '('，')'，'{'，'}'，'['，']'的字符串，判断字符串是否有效。
  * <p>
  * 有效字符串需满足：
  * <p>
@@ -15,19 +15,19 @@ import java.util.Stack;
  * <p>
  * 输入: "()"
  * 输出: true
- * 示例 2:
+ * 示例2:
  * <p>
  * 输入: "()[]{}"
  * 输出: true
- * 示例 3:
+ * 示例3:
  * <p>
  * 输入: "(]"
  * 输出: false
- * 示例 4:
+ * 示例4:
  * <p>
  * 输入: "([)]"
  * 输出: false
- * 示例 5:
+ * 示例5:
  * <p>
  * 输入: "{[]}"
  * 输出: true
@@ -36,6 +36,8 @@ import java.util.Stack;
  * 来源：力扣（LeetCode）
  * 链接：https://leetcode-cn.com/problems/valid-parentheses
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+ *
+ * @author yujuan
  */
 public class BracketMatch {
 
@@ -55,7 +57,7 @@ public class BracketMatch {
         if (s.length() == 0) {
             return true;
         }
-        //长度和1 做与元素,如果等于1 代表长度不为偶数 等价于  s.length/2!=0
+        //长度和1 做与运算,如果等于1 代表长度不为偶数 等价于  s.length/2!=0
         if ((s.length() & 1) == 1) {
             return false;
         }
@@ -90,7 +92,7 @@ public class BracketMatch {
                     return false;
             }
         }
-        return index==0;
+        return index == 0;
     }
 
 
